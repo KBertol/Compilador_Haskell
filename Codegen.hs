@@ -36,7 +36,9 @@ tamanhoTab :: [Var] -> Int
 tamanhoTab = sum . map (tamanhoTipo . getTipo)
 
 construirTabFuncoes :: [Funcao] -> TabFuncoes
-construirTabFuncoes = map (\(nome :->: sig) -> (nome, sig))
+construirTabFuncoes = map converter
+   where 
+     converter(nome :->: (params, ret)) = (nome, (map getTipo params, ret))
 
 buscarFuncao :: Id -> [Funcao] -> Funcao
 buscarFuncao nome (f@(n :->: _):fs)
