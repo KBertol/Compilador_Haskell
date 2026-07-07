@@ -107,7 +107,7 @@ L8:
 
 .method public static main([Ljava/lang/String;)V
 	.limit stack 50
-	.limit locals 4
+	.limit locals 5
 
 	getstatic java/lang/System/out Ljava/io/PrintStream;
 	ldc "Numero:"
@@ -117,20 +117,19 @@ L8:
 	getstatic java/lang/System/in Ljava/io/InputStream;
 	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
 	invokevirtual java/util/Scanner/nextInt()I
-	istore_1
+	istore_2
 	ldc2_w 4.5
 	d2i
 	invokestatic teste/fat(I)I
-	istore_0
+	istore_1
 	ldc2_w 2.5
 	bipush 10
 	i2d
 	invokestatic teste/maior(DD)D
-	dstore_2
+	dstore_3
 	ldc "teste:"
 	iconst_1
 	i2d
 	invokestatic teste/imprimir(Ljava/lang/String;D)V
-	return
 	return
 .end method

@@ -37,7 +37,7 @@ executar input = do
     if temErro
        then putStrLn "\n[ERRO] Analise Semantica concluida com erros!"
        else putStrLn "\n[OK] Analise Semantica concluida com sucesso!"
-
+ -- print ast'
     if temErro
        then putStrLn "\nGeracao de codigo cancelada devido a erros semanticos."
        else do
