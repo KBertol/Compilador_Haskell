@@ -101,7 +101,6 @@ L8:
 	getstatic java/lang/System/out Ljava/io/PrintStream;
 	dload_1
 	invokevirtual java/io/PrintStream/println(D)V
-	return
 
 .end method
 
